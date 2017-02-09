@@ -51,7 +51,7 @@ This is a simple front-end boilerplate forked from Damon Bauer's own [npm-build-
   Start a new server and watch for CSS & JS file changes in the `dist` folder
 
 ### `build:pug`
-  `pug --output-style compressed -o dist/ src/pug/index.pug`
+  `pug --output-style compressed -o dist/ src/pug/*.pug`
 
   Compiles index.pug into dist/index.html
 
