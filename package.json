@@ -1,14 +1,14 @@
 {
-  "name": "npm-build-boilerplate",
-  "version": "1.2.0",
-  "description": "A set of common build tasks written with npm scripts.",
-  "author": "Damon Bauer <hello@damonbauer.me>",
+  "name": "npm-boilerplate",
+  "version": "1.0",
+  "description": "A simple front-end boilerplate using NPM Scripts",
+  "author": "Seb Dancer-Michel <s.dancermichel@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/damonbauer/npm-build-boilerplate"
+    "url": "https://github.com/far0s/npm-build-boilerplate"
   },
-  "bugs": "https://github.com/damonbauer/npm-build-boilerplate/issues",
+  "bugs": "https://github.com/far0s/npm-build-boilerplate/issues",
   "keywords": [
     "npm",
     "scripts",
