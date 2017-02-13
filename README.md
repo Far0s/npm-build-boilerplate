@@ -45,10 +45,15 @@ This is a simple front-end boilerplate forked from Damon Bauer's own [npm-build-
 
   Compress separate SVG files and combine them into one SVG "sprite"
 
-### `serve`
+### `bsync`
   `browser-sync start --server --files 'dist/css/*.css, dist/js/*.js, **/*.html, !node_modules/**/*.html'`
 
   Start a new server and watch for CSS & JS file changes in the `dist` folder
+
+### `serve`
+  `serve -p 4444'`
+
+  Serve entire project on a local URL on port 4444, does not watch for changes
 
 ### `build:pug`
   `pug --output-style compressed -o dist/ src/pug/*.pug`
@@ -96,7 +101,7 @@ This is a simple front-end boilerplate forked from Damon Bauer's own [npm-build-
   Watches for any images in `src` to change, then runs the `build:images` task
 
 ### `watch:all`
-  `npm-run-all -p serve watch:pug watch:css watch:js watch:images`
+  `npm-run-all -p bsync watch:pug watch:css watch:js watch:images`
 
   Run the following tasks simultaneously: `serve`, `watch:pug`, `watch:css`, `watch:js` & `watch:images`. When a .pug, .scss or .js file changes in `src` or an image changes in `src/images`, the task will compile the changes to `dist`, and the server will be notified of the change. Any browser connected to the server will then inject the new file from `dist`
 

@@ -25,7 +25,8 @@
     "uglify": "mkdirp dist/js -p && uglifyjs src/js/*.js -m -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js",
     "imagemin": "imagemin src/images/* -o dist/images",
     "icons": "svgo -f src/images/icons -o dist/images/icons && svg-sprite-generate -d dist/images/icons -o dist/images/icons/sprite.svg",
-    "serve": "browser-sync start --server --index \"dist/index.html\" --files \"dist/css/*.css, dist/js/*.js, dist/*.html, !node_modules/**/*.html\"",
+    "bsync": "browser-sync start --server --index \"dist/index.html\" --files \"dist/css/*.css, dist/js/*.js, dist/*.html, !node_modules/**/*.html\"",
+    "serve": "serve -p 4444",
     "build:pug": "pug --pretty -o dist/ src/pug/*.pug",
     "build:css": "npm run scss && npm run autoprefixer",
     "build:js": "npm run lint && npm run uglify",
@@ -35,7 +36,7 @@
     "watch:css": "onchange \"src/scss\" -- npm run build:css",
     "watch:js": "onchange \"src/js\" -- npm run build:js",
     "watch:images": "onchange \"src/images\" -- npm run build:images",
-    "watch:all": "npm-run-all -p serve watch:pug watch:css watch:js watch:images",
+    "watch:all": "npm-run-all -p bsync watch:pug watch:css watch:js watch:images",
     "postinstall": "npm run build:all && npm run watch:all"
   },
   "devDependencies": {
