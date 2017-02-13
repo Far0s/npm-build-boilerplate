@@ -6,8 +6,12 @@ This is a simple front-end boilerplate forked from Damon Bauer's own [npm-build-
 1. Clone this repo — or copy the contents `"devDependencies"` into your `package.json` + copy any tasks you want from the `"scripts"` object into your `package.json` `"scripts"` object.
 2. Run `sudo npm install`
 3. Run any taks with `npm run task` where `task` is the name of the task from the `"scripts"` object.
-4. Quickstart: `npm run postinstall` -> NPM will build the project in the `/dist` folder and start a live-reloading server after.
-5.
+4. *Quickstart*: `npm run postinstall` -> NPM will build the project in the `/dist` folder and start a live-reloading server after.
+
+## Deploy with *Now*
+1. Install [now](https://zeit.co/now) with `sudo npm i now -g`
+2. Run `now` in your terminal. It will give you a unique URL and install/build/run your project automatically.
+Note: now will run 2 important tasks after `install`: `build` which will build the _/dist_ directory, and `start` which will start the micro server using `index.js`.
 
 ## List of available tasks
 ### `clean`
@@ -109,3 +113,13 @@ This is a simple front-end boilerplate forked from Damon Bauer's own [npm-build-
   `npm run build:all && npm run watch:all`
 
   Runs `watch:all` after `npm install` is finished
+
+### `start`
+  `node --harmony-async-await index`
+
+  Start the micro server (used by *now*)
+
+### `build`
+  `npm run postinstall`
+
+  Will build project (used by *now*)
